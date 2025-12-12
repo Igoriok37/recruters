@@ -1,0 +1,42 @@
+.partners {
+  margin-block: 2.5rem;
+  overflow-x: scroll;
+  padding-inline: 1.25rem;
+
+  @include mobile {
+    margin-top: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-rows: 8.125rem 8.125rem 8.125rem;
+    row-gap: 1.375rem;
+
+    @include mobile {
+      row-gap: 0.625rem;
+    }
+  }
+
+  &__list-1 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 1.375rem;
+  }
+
+  &__list-2 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 1.375rem;
+    transform: translateX(-5%);
+  }
+
+  &__list-3 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 1.375rem;
+  }
+
+  &__item {
+    min-width: 11.875rem;
+  }
+}

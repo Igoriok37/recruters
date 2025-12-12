@@ -1,0 +1,53 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+
+  &__link {
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &-phone {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  &-content {
+    display: none;
+    position: absolute;
+    left: -8.125rem;
+    background-color: #ffffff;
+    padding: 1.8rem;
+    width: 13rem;
+    height: auto;
+    overflow: auto;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--button-shadow);
+    z-index: 1;
+  
+    @include desktop-l {
+      left: -12.5rem;
+      width: 17rem;
+    }
+  
+    @include mobile {
+      left: -12.5rem;
+    }
+  }
+}
+
+.show {display: block;}
+
+
+
+
+
+
+

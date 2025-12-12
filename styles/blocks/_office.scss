@@ -1,0 +1,157 @@
+.office {
+  margin-top: -2.125rem;
+  padding-bottom: 7rem;
+  overflow: hidden;
+
+  &__header {
+    margin-bottom: 3.875rem;
+
+    @include mobile {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__slider {
+    width: 54.0625rem;
+    height: 100%;
+    overflow: visible;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 1.25rem;
+  }
+
+  &-card {
+    &__body {
+      background-color: var(--bgc-beg);
+      display: flex;
+      justify-content: center;
+      border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+
+      @include mobile {
+        border-radius: var(--border-radius-xs) var(--border-radius-xs) 0 0;
+      }
+    }
+
+    &__image {
+      padding-top: 0.625rem;
+      padding-inline: 0.875rem;
+
+      @include mobile {
+        padding: 0.3125rem;
+        padding-bottom: 0;
+      }
+    }
+
+    &__bottom {
+      background-color: var(--color-light);
+      border-inline: var(--border-light);
+      border-bottom: var(--border-light);
+      border-radius: 0 0 var(--border-radius-medium) var(--border-radius-medium);
+      padding: 1.5625rem 1.75rem 1.0625rem 1.6875rem;
+
+      @include mobile {
+        padding: 0.75rem;
+        border-radius: 0 0 var(--border-radius-xs) var(--border-radius-xs);
+      }
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+
+      @include mobile {
+        font-size: 0.875rem;
+        font-weight: 300;
+      }
+    }
+
+    &__description {
+      color: var(--color-dark-alt);
+
+      @include mobile {
+        font-size: 0.75rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    transform: translateY(65%);
+    left: 71vw;
+    width: 12.5rem;
+    height: 2.5rem;
+  
+    @include mobile {
+      left: 60vw;
+      width: 8.75rem;
+    }
+  }
+
+  &-prev,
+  &-next {
+  width: 5.125rem;
+  height: 3.75rem;
+  border: none;
+  border-radius: 6.25rem;
+  content: '';
+  background-image: url(../../images/icons/arrow-slide-left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include mobile {
+    width: 3.4rem;
+    height: 2.5rem;
+  }
+}
+
+  &-next {
+    background-image: url(../../images/icons/arrow-slide-right-gray.svg);
+  }
+
+  &-pagination {
+    position: absolute;
+    transform: translateY(190%);
+    left: -35% !important;
+
+    @include mobile {
+      max-width: 15.625rem;
+      transform: translateY(220%);
+      left: -2.5rem !important;
+    }
+  
+    span {
+      width: 1.125rem;
+      height: 1.125rem;
+      background-color: var(--color-gray-alt);
+      user-select: none;
+      margin: 0 !important;
+      opacity: 1 !important;
+      margin: 0.75rem  !important;
+      
+      @include mobile {
+        width: 0.75rem;
+        height: 0.75rem;
+        margin: 0.5rem  !important;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    content: '';
+    width: 2.25rem;
+    height: 1.125rem;
+    background-color: var(--color-accent) !important;
+    border-radius: 4.1875rem;
+
+    @include mobile {
+      width: 1.5rem;
+      height: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,230 @@
+.advantages {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  padding-inline: 0.75rem;
+
+  .svg::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(#0000  15%, hotpink 0), linear-gradient(hotpink 0, #0000 15% );
+    filter: url(#round0); 
+    content: "";
+  }
+  .box {
+    clip-path: polygon(0 0,calc(100% - 50px) 0,calc(100% - 50px) 50px,100% 50px,100% 100%,50px 100%,50px calc(100% - 50px),0 calc(100% - 50px));
+  }
+  .box {
+  mask:
+    conic-gradient(at 100px 100px,#000 75%,#0000 0) -50px -50px,
+    repeating-conic-gradient(#0000 0 25%,#000 0 50%);	
+}
+
+.box {
+  position: relative;
+}
+
+  .svg + .svg::before {
+    filter: blur(0.25em) url(#round1);
+  }
+
+  .svg {
+    place-self: center;
+    place-content: center;
+    position: relative;
+    width: Min(Round(100%, 2px), 96.875rem);
+    height: fit-content;
+    padding: 1.3rem 8.125rem 6rem 3.75rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3.75rem;
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 6.25rem;
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.75rem;
+    border: var(--border-light);
+    border-radius: var(--border-radius-xs);
+
+    @include tablet {
+      height: 14.4375rem;
+    }
+  }
+
+  &-card {
+    &__title {
+      margin-top: 0.5rem;
+      margin-bottom: 0.625rem;
+      font-size: 1.25rem;
+    }
+
+    &__description {
+      max-width: 26.25rem;
+      color: var(--color-dark-alt);
+    }
+  }
+
+  &__slider {
+    width: 22.8125rem;
+    height: 100%;
+    overflow: visible;
+  }
+
+  &__buttons {
+    position: absolute;
+    transform: translateY(-165%);
+    left: 71vw;
+    width: 8.75rem;
+
+    @include mobile {
+      left: 60vw;
+    }
+  }
+
+  &-pagination {
+    position: absolute;
+    transform: translateY(250%);
+    left: -25% !important;
+  
+    @include mobile {
+      max-width: 15.625rem;
+      transform: translateY(220%);
+      left: -2.5rem !important;
+    }
+  
+  }
+
+  &-banner {
+    background-image: url(../../images/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    width: 95.625rem;
+    width: 100%;
+    min-height: 24rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3.75rem;
+    padding: 1.625rem 8.125rem 6.0625rem 3.75rem;
+    position: relative;
+    z-index: 1;
+
+    @include desktop-l {
+      padding: 2rem;
+      align-items: start;
+      column-gap: 1vw;
+    }
+
+    @include desktop {
+      padding: 1rem;
+    }
+
+    @include tablet {
+      padding: 1.8rem 1.5rem 8rem;
+      background-size: cover;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      height: 100%;
+    }
+
+    @include mobile-s {
+      padding: 1.8rem 1rem 3rem;
+      background-image: url(../../images/banner-bg-mb.png);
+      background-size: cover;
+      max-width: 30rem;
+      width: 100%;
+      height: 100%;
+      margin-right: -0.625rem;
+    }
+
+    &__left {
+      img {
+        max-width: none;
+
+        @include desktop-l {
+          width: 15vw;
+        }
+
+        @include tablet {
+          width: 10.625rem;
+        }
+      }
+    }
+
+    &__body {
+      @include desktop-l {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+    }
+
+    &__title {
+      margin-top: 3.25rem;
+      margin-bottom: 2.625rem;
+
+      @include desktop-l {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      @include desktop {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include desktop {
+        flex-direction: column;
+        row-gap: 1.25rem;
+      }
+    }
+
+    &__subtitle {
+      color: var(--color-dark);
+      
+      @include mobile {
+        font-size: 1.25rem;
+        text-align: center;
+      }
+    }
+
+    &__button {
+      @include mobile-s {
+        width: 100%;
+      }
+    }
+  }
+}

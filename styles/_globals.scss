@@ -1,0 +1,129 @@
+body{
+  @include fluid-text(16, 16);
+
+  font-family: var(--font-family-base);
+  font-weight: 400;
+
+  line-height: 1.25;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
+}
+
+h1 {
+  @include fluid-text(30, 20);
+}
+h2 {
+  @include fluid-text(50, 30);
+}
+h3 {
+  @include fluid-text(40, 30);
+}
+h4 {
+  @include fluid-text(30, 18);
+}
+h5 {
+  @include fluid-text(24, 16);
+}
+h6 {
+  @include fluid-text(20, 16);
+}
+
+.h1 {
+  @include fluid-text(30, 20);
+}
+.h2 {  
+  @include fluid-text(50, 30);
+}
+.h3 {
+  @include fluid-text(40, 24);
+}
+.h4 {
+  @include fluid-text(30, 20);
+}
+.h5 {
+  @include fluid-text(20, 16);
+}
+
+@keyframes fadeInZero {
+  0%{
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+}
+@keyframes fadeInUp {
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, -200%, 0);
+    transform: translate3d(0, -200%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+}
+
+@keyframes fadeInDown {
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+}
+
+@keyframes fadeInRight {
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+}
+
+
+@keyframes fadeInLeft {
+  0%{
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+}
+
+

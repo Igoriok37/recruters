@@ -1,0 +1,68 @@
+:root {
+  --color-dark: #191919;
+  --color-dark-alt: #6c6c6c;
+  --color-light: #ffffff;
+  --color-gray: #F4F4F4;
+  --color-gray-alt: #CACACA;
+  --color-accent: #f4ae00;
+  --bgc-beg: #efe9d3;
+  --bgc-beg-alt: #f1ecdf;
+  --bgc-beg-dark: #dfd9cb;
+ 
+
+  --bgc-gradient-light:  radial-gradient(50% 50% at 50% 50%, #fffdf5 0%, #efe9d3 100%);
+  --bgc-gradient:  linear-gradient(135deg, #565247 0%, #4b4a46 100%);
+
+  --button-gradient: linear-gradient(180deg, #ffcc3f 0%, #f4ae00 100%);
+  --button-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.1);
+  
+  --icons-gradient: linear-gradient(180deg, #ffcc3f 0%, #f4ae00 100%);
+  
+  --border-light: 1px solid #e8e6e4; 
+  --border-acccent: 1px solid var(--color-accent);
+  --border-button-light:  9px solid #fff;
+  --border-button-accent:  9px solid rgba(249, 188, 30, 0.19);
+  --border-button-mobile-light:  5px solid #fff;
+  --border-button-mobile-accent:  5px solid rgba(249, 188, 30, 0.19);
+
+
+  --border-radius-super: 114px;
+  --border-radius-big: 100px;
+  --border-radius-large: 50px;
+  --border-radius-blocks: 45px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 13px;
+  --border-radius-xs: 11px;
+  --border-radius-xxs: 6px;
+
+  --shadow: 0 5px 0 0 var(--color-dark);
+  --shadow-alt: 0 0 15px 0 rgba(12, 12, 13, 0.05);
+  --card-shadow:  0 1px 3px 0 rgba(12, 12, 13, 0.15);
+  --text-shadow: 0 1px 0 -1px rgba(12, 12, 13, 0.15);
+
+  --font-family-base: 'Geologica', sans-serif;
+  
+  --container-big-width: 1920px;
+  --container-width: 1550px;
+  --container-padding-x: 20px;
+  --section-padding-big-y: 100px;
+  --section-padding-y: 50px;
+
+  --input-height: 60px;
+
+  --button-height-big: 60px;
+  --button-height: 57px;
+ 
+
+  --transition-duration: 0.3s;
+
+  @include desktop{
+    --section-padding-big-y: 80px;
+    --section-padding-y: 40px;
+  }
+  @include mobile{
+    --section-padding-big-y: 60px;
+    --section-padding-y: 22px;
+  }
+}
+

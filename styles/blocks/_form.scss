@@ -1,0 +1,41 @@
+.form {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.25rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1.25rem;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    font-weight: 300;
+    max-width: 51.5rem;
+
+    @include tablet {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__button {
+    width: 18.25rem;
+  }
+}

@@ -1,0 +1,135 @@
+.testimonials {
+  background-color: var(--color-light);
+  border-radius: var(--border-radius-blocks) var(--border-radius-blocks) 0 0;
+  margin-top: -3.125rem;
+  padding-bottom: 6.25rem;
+  overflow: hidden;
+
+  @include mobile {
+    border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0;
+  }
+
+  &__header {
+    margin-bottom: 2.5rem;
+
+    @include mobile {
+      max-width: 17.5rem;
+    }
+  }
+
+  &__slider {
+    width: 27.75rem;
+    height: 28rem;
+    overflow: visible;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 1.25rem;
+  }
+
+  &__item {
+    border: var(--border-light);
+    border-radius: var(--border-radius-xs);
+    padding: 1.25rem;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &__image {
+      border-radius: 50%;
+    }
+
+    &__name {
+      color: var(--color-dark);
+    }
+
+    &__post {
+      font-size: 1.25rem;
+    }
+
+    &__city {
+      color: var(--color-dark-alt);
+      font-size: 0.875rem;
+    }
+
+    &__description {
+      color: var(--color-dark-alt);
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    transform: translateY(105%);
+    left: 69.5vw;
+    width: 12.5rem;
+    height: 2.5rem;
+  
+    @include mobile {
+      transform: translateY(65%);
+      left: 60vw;
+      width: 8.75rem;
+    }
+  }
+
+  
+  &-prev,
+  &-next {
+  width: 5.125rem;
+  height: 3.75rem;
+  
+
+  @include mobile {
+    width: 3.4rem;
+    height: 2.5rem;
+  }
+}
+
+&-pagination {
+  position: absolute;
+  transform: translateY(220%);
+  left: -22.5% !important;
+
+  @include mobile {
+    max-width: 15.625rem;
+    transform: translateY(220%);
+    left: -2.5rem !important;
+  }
+
+  span {
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: var(--color-gray-alt);
+    user-select: none;
+    margin: 0 !important;
+    opacity: 1 !important;
+    margin: 0.75rem  !important;
+    
+    @include mobile {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0.5rem  !important;
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  content: '';
+  width: 2.25rem;
+  height: 1.125rem;
+  background-color: var(--color-accent) !important;
+  border-radius: 4.1875rem;
+
+  @include mobile {
+    width: 1.5rem;
+    height: 0.75rem;
+  }
+}
+}

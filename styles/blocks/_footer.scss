@@ -1,0 +1,149 @@
+.footer {
+  background-color: #4b4a46;
+  border-radius: var(--border-radius-blocks) var(--border-radius-blocks) 0 0;
+  color: var(--color-light);
+  font-size: 0.875rem;
+  font-weight: 300;
+  max-width: 120rem;
+  margin-top: -1.875rem;
+
+  @include mobile {
+    margin-top: -0.625rem;
+  }
+
+  &__inner {
+    max-width: 76.25rem;
+    width: 100%;
+    padding: 3.125rem 2.5rem 5.375rem 1.25rem;
+    margin: 0 auto;
+
+    @include mobile {
+      padding: 3.125rem 1.25rem 2.875rem 1.25rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    column-gap: 5.4375rem;
+    padding-bottom: 0.9375rem;
+    margin-bottom: 1.375rem;
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.5);
+
+    @include desktop-l {
+      column-gap: 4.5vw;
+    }
+  }
+
+  &__left {
+    display: flex;
+    column-gap: 10.9375rem;
+    width: 100%;
+
+    @include desktop-l {
+      column-gap: 7.4vw;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 1.875rem;
+    }
+  }
+
+  &-address {
+    margin-top: -0.625rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &__logo-image {
+      margin-bottom: 0.875rem;
+    }
+  }
+
+  &__contacts-item {
+    text-transform: none !important;
+  }
+
+  &__menu-title,
+  &__policy-title,
+  &__contacts-title  {
+    margin-bottom: 1.25rem;
+  }
+
+  &__menu-list,
+  &__policy-list,
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.4375rem;
+  }
+
+  &__policy {
+    max-width: 17.5rem;
+  }
+
+  &__contacts-list {
+    row-gap: 1rem;
+  }
+
+  &__menu-link,
+  &__policy-link,
+  &__contacts-item--tel {
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+  
+  &__contacts {
+    @include tablet {
+      order: -1;
+    }
+  }
+
+  &__contacts-item {
+    span {
+      @include hover {
+        color: var(--color-light);
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    
+    &-registry {
+      display: flex;
+      column-gap: 0.9375rem;
+    }
+  }
+
+  &__soc1als-list {
+    display: flex;
+    column-gap: 0.375rem;
+    margin-right: -1.25rem;
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  &__soc1als-link:hover {
+    svg {
+      path {
+    fill: var(--color-accent);
+      }
+    }
+  }
+
+}

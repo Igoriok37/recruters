@@ -1,0 +1,77 @@
+.card {
+  padding: 1.1875rem 1.4375rem 1.5rem 1.4375rem;
+  width: 26rem;
+  height: 24rem;
+  background: #ffffff;
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--card-shadow);
+
+  @include mobile-s {
+    width: 22.0625rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8125rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../../images/icons/Ellipse\ 5.svg);
+      top: 0;
+      right: 0;
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 0.625rem;
+    margin-top: -0.1875rem;
+  }
+
+  &__request {
+    display: flex;
+    column-gap: 0.625rem;
+    max-width: 23.125rem;
+    max-height: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    padding: 0.3125rem;
+    margin-top: 0.1875rem;
+    max-width: 23.125rem;
+    max-height: 5.1875rem;
+    font-size: 0.875rem;
+    border: 0.0625rem solid #dfd9cb;
+    border-radius: var(--border-radius-xxs);
+    color: var(--color-dark-alt);
+    padding-bottom: 1.5rem;
+  }
+
+  &__data {
+    margin-top: 0.3125rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.625rem;
+  }
+
+  &__pleer {
+    margin-top: -0.5rem;
+
+    &__play {
+      min-width: 23.125rem;
+    }
+  }
+}
+
+

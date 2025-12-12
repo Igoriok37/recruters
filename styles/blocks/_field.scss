@@ -1,0 +1,13 @@
+.field {
+  width: 100%;
+
+  &__input {
+    @include reset-button;
+
+    width: 100%;
+    height: var(--input-height);
+    padding: 1rem 1.25rem;
+    background-color: var(--color-light);
+    border-radius: 1rem;
+  }
+}
